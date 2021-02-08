@@ -13,26 +13,43 @@ namespace ClassMetotDemo
             musteri1.Soyadi = "Avcı";
             musteri1.Bakiye = 1000;
             musteri1.SonIslemTarihi = "12.12.2020";
-            Console.WriteLine("Müşteri Adı : " + musteri1.Adi +"\nMüşteri Soyadı : " + musteri1.Soyadi +"\nBakiye Tutarı : " + musteri1.Bakiye + " TL " + "\nSon İşlem Tarihi : " + musteri1.SonIslemTarihi);
-
-            Console.WriteLine("----------------------> Yeni Müşteri <----------------------");
+            
 
             Musteri musteri2 = new Musteri();
             musteri2.Adi = "Halil";
             musteri2.Soyadi = "İnal";
             musteri2.Bakiye = 550;
             musteri2.SonIslemTarihi = "01.09.2020";
-            Console.WriteLine("Müşteri Adı: " + musteri2.Adi + "\nMüşteri Soyadı: " + musteri2.Soyadi + "\nBakiye Tutarı: " + musteri2.Bakiye + " TL " + "\nSon İşlem Tarihi: " + musteri2.SonIslemTarihi);
-
-            Console.WriteLine("----------------------> Yeni Müşteri <----------------------");
+            
 
             Musteri musteri3 = new Musteri();
             musteri3.Adi = "Selin";
             musteri3.Soyadi = "Şahin";
             musteri3.Bakiye = 0;
             musteri3.SonIslemTarihi = "29.01.2021";
-            Console.WriteLine("Müşteri Adı: " + musteri3.Adi + "\nMüşteri Soyadı: " + musteri3.Soyadi + "\nBakiye Tutarı: " + musteri3.Bakiye + " TL " + "\nSon İşlem Tarihi: " + musteri3.SonIslemTarihi);
+            
 
+            Musteri[] musteriler = new Musteri[] { musteri1, musteri2, musteri3 };
+
+            foreach (Musteri musteri in musteriler)
+            {
+                Console.WriteLine(musteri.Adi );
+                Console.WriteLine(musteri.Soyadi);
+                Console.WriteLine(musteri.Bakiye);
+                Console.WriteLine(musteri.SonIslemTarihi);
+            }
+
+            MusteriManager musteriManager = new MusteriManager();
+            musteriManager.Ekle(musteri1);
+            musteriManager.Ekle(musteri2);
+            musteriManager.Ekle(musteri3);
+
+            Console.WriteLine("---------------------------");
+
+            MusteriManager musteriManager1 = new MusteriManager();
+            musteriManager1.Sil(musteri1);
+            musteriManager1.Sil(musteri2);
+            musteriManager1.Sil(musteri3);
         }
     }
 }

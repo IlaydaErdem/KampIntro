@@ -8,11 +8,11 @@ namespace ClassMetotDemo
     {
         public void Ekle(Musteri musteri )
         {
-            Console.WriteLine("Müşteri Adı: " + musteri.Adi + "Müşteri Soyadı: " +musteri.Soyadi + "Müşteri Bakiye: " + musteri.Bakiye + "Müşteri Son İşlem Tarihi: " + musteri.SonIslemTarihi);
+            Console.WriteLine("Adınıza Hesabınız açıldı :" + musteri.Adi + " " + musteri.Soyadi);
         }
         public void Sil(Musteri musteri)
         {
-            
+            Console.WriteLine("Hesabınız silindi :" + musteri.Adi + " " + musteri.Soyadi);
         }
     }
 }
